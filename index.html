@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="andelaForm">
+<head>
+  <meta charset="utf-8">
+  <title>Enrollment Form</title>
+
+</head>
+<body>
+<div ng-controller="formController as formCtrl">
+  <form ng-submit="submit()">
+
+  <table>
+    <th colspan="2">ANDELA ENROLMENT FORM</th>
+      <tr><td> Name: </td><td> <input ng-model="user.name" type="text"></td></tr>
+      <tr><td> Email: </td><td> <input ng-model="user.email" type="email"></td></tr>
+      <tr><td> Location: </td><td> <input ng-model="user.location" type="text"></td></tr>
+      <tr><td> Password:</td><td> <input ng-model="user.password" type="password"></td></tr>
+  </table>
+  <!-- <input type="submit" id="submit" value="Submit"> -->
+  <input type="submit" value="Submit Details"/>
+  </form>
+
+<div>
+
+  <p ng-bind-template = "{{details.salutation}} {{details.name}} "></p>
+  <p ng-bind-template ="{{details.emailDisp}} {{details.email}}"></p>
+  <p ng-bind-template = "{{details.locDisp}} {{details.location}}"></p>
+</div>
+</div>
+  <script src="angular.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
